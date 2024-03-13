@@ -9,14 +9,15 @@ class Hero{
 
     public:
     char level;
-    char *name; // heap me data to allocate kra rhe hai by dynamically .
+    char *name; // heap me data to allocate kra rhe hai by dynamically because space jyada hota hai.
 
-    void print(){
+    void print(){ // this is pointer to the current object.
         cout<<this->level<<endl; // this target to the parent class
         cout<<this->health<<endl;
     }
 
     //constructor (by default)
+
     Hero(){
         cout<<"simple constructor called"<<endl;
         name=new char[100];  // allocating memory on the heap for our property 'name'

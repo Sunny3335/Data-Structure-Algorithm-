@@ -1,54 +1,67 @@
 #include <bits/stdc++.h>
 using namespace std;
-
-class Hero{
-
-    // properties
-    private:
-    int health;
-
+// we can also make class to other file and then attach them to this file also.
+// #include "file.cpp"
+class Student
+{ // creation of class. this is only defined now that does not taking any memory.
+public:
+    private: // by default it is private.
+    int age;
     public:
-    char level;
+    int rollNo;
+    string niceName;
 
-    void print(){
-        cout<<level<<endl;
+
+    // getter
+    int getAge(){
+        return age;
     }
 
-    // making getter and setter  for the 'health' property
-    // getter to provide the value
-    int getHealth(){
-        return health;
+    //setter. it is used to put any condition like protection and password also.
+    void setAge(int a /*, int n */){
+        /* if(n==122){ // make some condition if it does not follow the it does not set the desired value.
+            age = a;
+        }else{ // other wise it set to 0 value.
+            age=0;
+        } */
+        age = a;
     }
 
-    char getLevel(){
-        return level;
-    }
-
-
-    // setter to set the value
-    void  setHealth(int h){
-        health=h;
-    }
-
-    void  setLevel(char ch){
-        level=ch;
-    }
 
 };
 
-int main(){
-    // creating object
-    Hero ram;
+int main()
+{
 
-    // cout<<"size "<<sizeof(ram)<<endl;
-    // size is the total size of used data types in the class
+    // creation of object
+    Student ram; // this is statically creation of object. this memory will be automatically deleted after deletion of object
+    // NOTE: we can not make the same object name with statically or dynamically.
+    // Student *mohan = new Student(); // this is dynamically creation of object. here we are using pointer to create the object. this occupied memory would have to delete manually.
 
-    // ram.health=23;
-    ram.setHealth(50); // setting the value for private member data using the setter
-    ram.level='A';
+    // cout << sizeof(ram) << endl; // in case of empty class size of object is 1 to keep identity of object.
 
-    cout<<"ram health "<<ram.getHealth()<<endl; // getting the value by using the getter for the private member properties.
-     cout<<"ram level "<<ram.level<<endl;
+    // access of public
+    // ram.niceName = "sunny";
+    // cout << ram.niceName << endl;
 
-return 0;
+    // access of private data.
+    cout << ram.getAge() << endl;
+    ram.setAge(32);
+    cout << ram.getAge() << endl;
+    //access for public data.
+    ram.rollNo = 43;
+    cout << ram.rollNo << endl;
+
+    // making a dynamically object
+    Student *ramu = new Student;
+    ramu->setAge(786);
+    (*ramu).rollNo = 59;
+    cout << (*ramu).rollNo << endl;
+    cout<<(*ramu).getAge()<<endl;
+    cout << endl;
+
+    // other way
+    cout << ramu->getAge() << endl;
+    cout << ramu->rollNo<< endl;
+    return 0;
 }
