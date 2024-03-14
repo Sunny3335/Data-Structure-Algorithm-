@@ -11,6 +11,9 @@ class B{
         return (a+b);
     }
 
+    // operator is object  of class and we can use it as function.
+    // + has two operand in which left one is current object and right one is object as referenced.
+
     void operator+ (B& obj){
         int value1=this->a;
         int value2=obj.a;

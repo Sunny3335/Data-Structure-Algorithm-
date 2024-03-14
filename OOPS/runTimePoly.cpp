@@ -4,17 +4,17 @@ using namespace std;
 class Animal{
 
     public:
-    void bark(){
-        cout<<"Barking"<<endl;
+    void speaking(){
+        cout<<"Animal is barking"<<endl;
     }
 
 };
 
-class human: public Animal{
+class Dog: public Animal{
 
     public:
-    void bark(){
-        cout<<"speaking"<<endl;
+    void speaking(){ // it is called function overriding and method overriding.
+        cout<<"Dog is barking"<<endl;
     }
 
     // NOTE if yha pe koi implementation nhi hoga then it will call the parent function call
@@ -23,8 +23,8 @@ class human: public Animal{
 
 int main(){
 
-    human sunny;
-    sunny.bark();
+    Dog d;
+    d.speaking();
 
 return 0;
 }

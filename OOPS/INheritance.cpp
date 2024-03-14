@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-
+// parent, super, Base class
 class Human{
     public:
     int height;
@@ -12,12 +12,13 @@ class Human{
         return this->age;
     }
 
-    int setWeight(int w){
+    void setWeight(int w){
         this->weight=w;
     }
 
 };
 
+// child class
 class Male:protected Human{
     public:
     string color;
@@ -29,6 +30,11 @@ class Male:protected Human{
     int getHeight(){
         return this->height;
     }
+
+    int getAge(){
+        return this->age;
+    }
+
 };
 
 
@@ -45,11 +51,19 @@ int main(){
     cout<<sunny.weight<<endl;
  */
 
-    Male sintu;
+    /* Male sintu;
     cout<<sintu.age<<endl;
 
-    cout<<sintu.getHeight()<<endl;
+    cout<<sintu.getHeight()<<endl; */
 
+    Male m1;
+    cout << m1.getAge()<< endl;
 
-return 0;
+    return 0;
 }
+
+// public mode me inherit krne se parent se aayi hui data member and method public hoti hai in the child class.
+
+// protected accessfier is accessed in the class and also by the child class.
+
+// protected can not be accessed out of the class.

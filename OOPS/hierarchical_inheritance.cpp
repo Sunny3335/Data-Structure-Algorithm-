@@ -32,7 +32,7 @@ int main(){
 
     C object3;
     object3.func1();
-    // object3.func2(); // it does not inherit 
+    // object3.func2(); // it does not inherit because no relation with object B.
     object3.func3();
 
 }

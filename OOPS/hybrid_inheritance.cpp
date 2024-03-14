@@ -5,45 +5,46 @@ using namespace std;
 
 class A{
     public:
-    void func(){
+    void func1(){
         cout<<"i am A"<<endl;
     }
 };
 
-class B{
+class B: public A{
     public:
-    void func(){
+    void func2(){
         cout<<"I am B "<<endl;
     }
 };
 
 class D{
     public:
-    void func(){
-        cout<<"I am B "<<endl;
+    void func3(){
+        cout<<"I am D "<<endl;
     }
 };
 
-class C: public A, public B{
+class C: public A, public D{
 
 };
 
 int main(){
-    /* A object1;
+    A object1;
     object1.func1();
 
     B object2;
     object2.func1();
     object2.func2();
 
-    C object3;
-    object3.func1();
+    D object3;
+    object3.func3();
+
+    cout << "hybrid " << endl;
+
+    C object4;
+    object4.func1();
     // object3.func2();
-    object3.func3(); */
+    object4.func3();
 
-    C obj;
-    // obj.func();
-
-    obj.A::func(); // inheritance ambiguity
 
 }
