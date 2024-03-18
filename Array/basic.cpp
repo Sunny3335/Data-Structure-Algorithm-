@@ -31,17 +31,20 @@ int main(){
     for(int i=0;i<n;i++){
         cout<<ans1[i]<<" ";
     }
-
     cout<<endl;
 
     int ans2[12]={2};
     /* for(int i=0;i<n;i++){
         cout<<ans2[i]<<" ";
     } */
+
     
     printArray(ans2,12);
 
     // cout<<"all is good"<<endl;
 
     return 0;
+    
+
+    
 }

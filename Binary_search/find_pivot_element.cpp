@@ -24,4 +24,5 @@ int main() {
 
     cout<<pivot(array_name,6);
     return 0;
+
 }

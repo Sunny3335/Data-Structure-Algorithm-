@@ -1,4 +1,4 @@
-#include <bits/stdc++.h>
+ #include <bits/stdc++.h>
 using namespace std;
 
 class Node{
@@ -46,8 +46,9 @@ int getLength(Node* &head){
     return len;
 }
 
+// insert at head.
 void insertAtHead(Node* &head,Node* &tail, int d){
-    // empty list
+    // empty list means head is NULL
     if(head==NULL){
         Node* temp=new Node(d);
         head=temp;
@@ -63,7 +64,7 @@ void insertAtHead(Node* &head,Node* &tail, int d){
 }
 
 void insertAtTail(Node* &tail, Node* &head, int d){
-    if(tail==NULL){
+    if(tail==NULL){ // if tail is NULL means empty.
         Node* temp=new Node(d);
         tail=temp;
         head=temp;
