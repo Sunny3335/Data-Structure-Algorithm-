@@ -25,3 +25,4 @@ int main()
     int des = 10;
     gharpahuchna(src, des);
 }
+

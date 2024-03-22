@@ -16,7 +16,7 @@ class Stack{
     }
 
     // push operation
-    void push(int element){
+    void push(int element){ // space is persent or not.
         if((size-top)>1){
             top++;
             arr[top]=element;
@@ -26,7 +26,7 @@ class Stack{
     }
 
     // pop operation
-    void pop(){
+    void pop(){ // check element is there or not.
         if(top>=0){
             top--;
         }else{
@@ -61,6 +61,8 @@ int main(){
     st.push(36);
     st.push(344);
     st.push(342);
+    st.push(32);
+    st.push(325);
 
     st.pop();
 
@@ -73,3 +75,5 @@ int main(){
 
 return 0;
 }
+
+// NOTE: all operation done in TC O(N);

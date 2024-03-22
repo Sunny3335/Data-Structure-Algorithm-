@@ -1,14 +1,17 @@
-#include<iostream>
+#include <bits/stdc++.h>
 using namespace std;
 
 int factorial(int n){
-
-    // define base condition.
+    // base case
     if(n==0){
         return 1;
     }
-    // int smallerproblem=factorial(n-1);
-    // int biggerproblem=n*smallerproblem;
+
+    // recursive relation
+    // int smallProblem=factorial(n-1);
+    // int biggerProblem=n*smallProblem;
+
+    // return biggerProblem;
 
     return n*factorial(n-1);
 }
@@ -17,4 +20,6 @@ int main(){
     cin>>n;
     int ans =factorial(n);
     cout<<ans<<endl;
+
+return 0;
 }
